@@ -14,7 +14,7 @@ main(int argc, char *argv[])
     long   cur_buffsize, input_length,  n;
     char *tmp_buf = NULL;//temp buff
     
-    if(argv[2] == "SYNC")     outfile = open(argv[1], O_RDWR|O_CREAT|O_SYNC, S_IRUSR|S_IWUSR);
+    if(argv[2] == "sync")     outfile = open(argv[1], O_RDWR|O_CREAT|O_SYNC, S_IRUSR|S_IWUSR);
        else                   outfile = open(argv[1], O_RDWR|O_CREAT, S_IRUSR|S_IWUSR);
      
     input_length = lseek(STDIN_FILENO, 0, SEEK_END);
